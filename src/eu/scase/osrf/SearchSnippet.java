@@ -10,8 +10,6 @@ import javax.ws.rs.core.MediaType;
 
 import eu.scase.agora.AgoraClient;
 import eu.scase.agora.response.Agora;
-import eu.scase.markos.MarkosClient;
-import eu.scase.markos.response.MarkosAsset;
 import eu.scase.osrf.response.OSRF;
 
 @Path("/snippet")

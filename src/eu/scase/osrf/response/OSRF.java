@@ -1,7 +1,6 @@
 package eu.scase.osrf.response;
 
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 
 
 public class OSRF {

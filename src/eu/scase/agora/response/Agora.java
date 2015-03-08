@@ -1,10 +1,8 @@
 
 package eu.scase.agora.response;
 
-import javax.annotation.Generated;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

@@ -1,17 +1,7 @@
 package eu.scase.markos;
 
-import java.io.File;
-import java.util.ArrayList;
-
 import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
 
-import eu.scase.markos.response.Binding;
-import eu.scase.markos.response.Markos;
-import eu.scase.markos.response.Result;
-import eu.scase.markos.response.Results;
 import eu.scase.markos.response.Sparql;
 
 public class Unmarshall {
@@ -22,10 +12,10 @@ public class Unmarshall {
 			JAXBContext context;
 			context = JAXBContext.newInstance(Sparql.class);
 
-			Unmarshaller un = context.createUnmarshaller();
+			context.createUnmarshaller();
 			// InputStream is = new ByteArrayInputStream(output.getBytes());
-			Sparql emp = (Sparql) un.unmarshal(new File("C:/test.xml"));
-			System.out.println();
+//			Sparql emp = (Sparql) un.unmarshal(new File("C:/test.xml"));
+//			System.out.println();
 		
 			
 			

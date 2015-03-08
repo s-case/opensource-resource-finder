@@ -4,27 +4,14 @@ import java.util.ArrayList;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import com.google.gson.Gson;
-
 import eu.scase.agora.AgoraClient;
-import eu.scase.agora.query.Bool;
-import eu.scase.agora.query.Filter;
-import eu.scase.agora.query.Filtered;
-import eu.scase.agora.query.HasParent;
-import eu.scase.agora.query.Match;
-import eu.scase.agora.query.Must;
-import eu.scase.agora.query.Query;
-import eu.scase.agora.query.Query_;
-import eu.scase.agora.query.Type;
 import eu.scase.agora.response.Agora;
 import eu.scase.markos.MarkosClient;
 import eu.scase.markos.response.MarkosAsset;
-import eu.scase.markos.response.Result;
 import eu.scase.osrf.response.OSRF;
 
 @Path("/class")

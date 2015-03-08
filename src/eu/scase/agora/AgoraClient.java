@@ -1,7 +1,6 @@
 package eu.scase.agora;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -10,19 +9,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
-
 import com.google.gson.Gson;
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.WebResource;
-import com.sun.jersey.api.client.config.ClientConfig;
-import com.sun.jersey.api.client.config.DefaultClientConfig;
 
 import eu.scase.agora.query.Bool;
 import eu.scase.agora.query.Filter;
 import eu.scase.agora.query.Filtered;
-import eu.scase.agora.query.HasParent;
 import eu.scase.agora.query.Match;
 import eu.scase.agora.query.Must;
 import eu.scase.agora.query.Query;
@@ -32,7 +23,6 @@ import eu.scase.agora.response.Agora;
 import eu.scase.agora.response.Hit;
 import eu.scase.osrf.Forges;
 import eu.scase.osrf.response.OSRF;
-import eu.scase.osrf.response.Response;
 
 public class AgoraClient {
 

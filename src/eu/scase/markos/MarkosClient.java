@@ -1,44 +1,16 @@
 package eu.scase.markos;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.Authenticator;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.PasswordAuthentication;
-import java.net.URI;
-import java.net.URL;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.core.util.MultivaluedMapImpl;
 
-import eu.scase.agora.query.Bool;
-import eu.scase.agora.query.Filter;
-import eu.scase.agora.query.Filtered;
-import eu.scase.agora.query.Match;
-import eu.scase.agora.query.Must;
-import eu.scase.agora.query.Query_;
-import eu.scase.agora.query.Type;
-import eu.scase.agora.response.Agora;
-import eu.scase.agora.response.Hit;
-import eu.scase.markos.response.Markos;
 import eu.scase.markos.response.MarkosAsset;
-import eu.scase.markos.response.Result;
-import eu.scase.markos.response.Results;
 import eu.scase.markos.response.SparqlParser;
 import eu.scase.osrf.Forges;
 import eu.scase.osrf.response.OSRF;
@@ -147,7 +119,7 @@ public class MarkosClient {
 			WebResource webResource = client
 					.resource("http://demo.markosproject.eu/data/sparql");
 
-			MultivaluedMap formData = new MultivaluedMapImpl();
+			MultivaluedMap<String, String> formData = new MultivaluedMapImpl();
 			formData.add("query", query);
 
 			ClientResponse response = webResource
@@ -225,7 +197,7 @@ public class MarkosClient {
 			WebResource webResource = client
 					.resource("http://demo.markosproject.eu/data/sparql");
 
-			MultivaluedMap formData = new MultivaluedMapImpl();
+			MultivaluedMap<String, String> formData = new MultivaluedMapImpl();
 
 			String option = "1";
 			switch (option) {
